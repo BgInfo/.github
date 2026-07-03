@@ -1,6 +1,5 @@
 <p align="center">
   <img src="https://img.shields.io/github/v/release/BgInfo/BgInfo?label=Latest%20Version&style=for-the-badge&color=blue" alt="Latest Version" />
-  <img src="https://img.shields.io/github/downloads/BgInfo/BgInfo/total?label=Total%20Downloads&style=for-the-badge&color=green" alt="Total Downloads" />
   <img src="https://img.shields.io/github/release-date/BgInfo/BgInfo?label=Release%20Date&style=for-the-badge&color=orange" alt="Release Date" />
   <img src="https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
   <img src="https://img.shields.io/badge/License-Free-brightgreen?style=for-the-badge" alt="Free" />
